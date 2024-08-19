@@ -1,5 +1,5 @@
 // Handle Slider Control and Display Password Length 
-let lengthDisplay = document.querySelector('[lengthDisplay');
+let lengthDisplay = document.querySelector('[lengthDisplay]');
 // console.log(lengthDisplay)
 let slider = document.querySelector('input[type=range]');
 // console.log(slider)
@@ -103,9 +103,7 @@ function calcStrength() {
 let copyMessage = document.querySelector("[copyMessage]");
 let copyBtn = document.querySelector(".copyBtn");
 let passwordDisplay = document.querySelector("input[passwordDisplay]");
-// passwordDisplay.value = "My Name is Priyansh";
 
-// Why we use it - https://stackoverflow.com/questions/45071353/copy-text-string-on-click#:~:text=15-,Use%20the%20Clipboard,-API!
 async function copyContent() {
     try {
         await navigator.clipboard.writeText(passwordDisplay.value);
@@ -117,10 +115,10 @@ async function copyContent() {
         copyMessage.innerText = "Failed";
     }
 
-    copyMessage.classList.add('active');
+    copyMessage.classList.add("active");
 
     setTimeout(() => {
-        copyMessage.classList.remove('active');
+        copyMessage.classList.remove("active");
     }, 2000)
 }
 
