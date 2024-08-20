@@ -8,6 +8,9 @@ let slider = document.querySelector('input[type=range]');
 function handleSlider() {
     slider.value = passwordLength;
     lengthDisplay.innerText = passwordLength;
+    const min = slider.min;
+    const max = slider.max;
+    slider.style.backgroundSize = ((passwordLength-min)*100/(max-min)) + "% 100%";
 }
 
 let passwordLength = 10;
